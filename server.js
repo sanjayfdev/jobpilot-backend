@@ -10,7 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({origin: 'https://jobpilot-frontend.vercel.app'}));
+app.use(cors({ origin: ['https://jobpilot-frontend.vercel.app', 'http://localhost:5173'], credentials: true }));
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
